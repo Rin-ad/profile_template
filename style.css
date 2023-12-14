@@ -1,0 +1,269 @@
+/* 見た目に関係ない */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 大枠 */
+
+body {
+    font-family: 'Inter','Noto Sans JP',sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 3em 0;
+}
+
+.container {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 850px;
+    background-color: #fff;
+    color: #555;
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.33);
+}
+
+/* ヘッダー */
+
+.header {
+    padding: 1em;
+    background-color: #01aab6; /* 色をお好みで変えてください */
+    text-align: center;
+    color: #fff;
+}
+
+.content {
+    padding: 1em;
+    text-align: center;
+}
+
+/* プロフィールのアイコン */
+
+.profile_icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+}
+
+.profile_icon>img {
+    width: 180px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 100vh;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.33);
+}
+
+/* 吹き出し */
+
+.balloon {
+    position: relative;
+    display: inline-block;
+    background-color: #01aab6; /* 色をお好みで変えてください */
+    border-radius: 100vh;
+    width: 20%;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.balloon::before {
+    content: '';
+    border: 10px solid transparent;
+    border-bottom: 10px solid #01aab6; /* 色をお好みで変えてください */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloon-bottom {
+    position: relative;
+    display: inline-block;
+    background-color: #01aab6; /* 色をお好みで変えてください */
+    border-radius: 100vh;
+    padding: 8px 1em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.balloon-bottom::before {
+    content: '';
+    border: 10px solid transparent;
+    border-top: 10px solid #01aab6; /* 色をお好みで変えてください */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 自己紹介本体 */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0 2em;
+    border-bottom: 2px dashed #ccc;
+}
+
+.question {
+    margin-bottom: 1em;
+}
+
+.profile_q {
+    width: 80%;
+}
+
+.profile_q>p {
+    word-break: break-all;
+    font-weight: bold;
+}
+
+/* SNS達 */
+
+.profile_sns {
+    display: flex;
+    padding: 1em 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    border-bottom: 2px dashed #ccc;
+}
+
+.profile_sns>a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.sns-x {
+    color: #000;
+}
+
+.sns-yt {
+    color: #ff2c2c;
+}
+
+.sns-github {
+    color: #000;
+}
+
+/* セクションの見出し */
+
+.section_title {
+    margin-top: 1em;
+    position: relative;
+    display: inline-block;
+    padding: 0 25px;
+}
+
+.section_title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: #555;
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+    left: 0;
+}
+
+.section_title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: #555;
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    right: 0;
+}
+
+/* サイトたち */
+
+.profile_sites {
+    display: flex;
+    flex-direction: column;
+    gap: 1em !important;
+    padding: 1em 0;
+}
+
+.site {
+    padding: 1em 0;
+    border-radius: 6px;
+    background-color: rgba(1, 170, 182, 0.589); /* 色をお好みで変えてください */
+    color: #fff;
+}
+
+.site_title {
+    font-size: 24px;
+    margin-bottom: 0.4em;
+}
+
+.site_btn {
+    display: inline-block;
+    position: relative;
+    margin-top: 8px;
+    width: 50%;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 14px 0;
+    font-weight: bold;
+    color: #01aab6; /* 色をお好みで変えてください */
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.11);
+    transition: all .5s;
+}
+
+.site_btn:hover {
+    background-color: #01aab6; /* 色をお好みで変えてください */
+    opacity: .8;
+    color: #fff;
+}
+
+.site_btn>i {
+    margin-right: 4px;
+}
+
+/* フッター */
+
+.footer {
+    margin-top: 1em;
+    font-family: 'JetBrains Mono',monospace;
+    text-align: center;
+    padding: 1em 2em;
+    color: #888;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.11);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* かるくレスポンシブ対応 */
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    .container {
+        width: 95%;
+    }
+    .profile_icon>img {
+        width: 150px;
+    }
+}
